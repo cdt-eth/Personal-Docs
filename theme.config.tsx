@@ -2,17 +2,15 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>cdt docs</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/cdt-eth',
   },
-  chat: {
-    link: 'https://discord.com',
-  },
+faviconGlyph: '🆒',
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: 'Nextra Docs Template',
-  },
+    text: 'made by cdt.',
+  }, 
 }
 
 export default config
