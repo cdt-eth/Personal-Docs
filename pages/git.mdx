@@ -1,0 +1,47 @@
+# Git
+
+## Copy content of current branch to a new branch
+
+If I'm on `main` (or some `old_branch`) and I forget to create a new branch before I start working on something, I can do this to copy the contents of `main` to a new branch (ex. `new_branch`) and then switch to that, assuming I haven't committed anything yet.
+
+```bash copy
+git checkout -b new_branch old_branch
+```
+
+## Pull changes back into local branch
+
+An example would be when I have an open PR, I merge another PR _into_ that open one, and now I want to pull everything from the open PR back into my local.
+
+```bash {3}
+git pull origin pull/_prNumber_/head
+
+ex. git pull origin pull/177/head
+```
+
+## Open a pull request
+
+```bash copy
+gh pr create
+```
+
+## Apply a specific stash
+
+After `git stash list` to see the list of stashes, you can apply a specific one by using the following command:
+
+```bash {3} copy
+git stash apply stash@{n}
+```
+
+Take a list of stashes for example using `git stash list`:
+
+```bash {2}
+stash@{0}: WIP on cdt-example-branch: 61a67951 new base url
+stash@{1}: WIP on cdt-example-branch: 1c09c67a add favicon
+stash@{2}: WIP on cdt-example-branch: 866ab427 swap images
+```
+
+If you want the middle stash, you can use the following command:
+
+```bash
+git stash apply stash@{1}
+```
